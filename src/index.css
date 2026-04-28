@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SimplaEdu Design System
+   Brand: institutional blue + premium gold accent on neutral light surfaces.
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 30% 98%;
+    --foreground: 226 32% 14%;
+
+    --surface: 0 0% 100%;
+    --surface-foreground: 226 32% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 226 32% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 226 32% 14%;
+
+    /* Brand */
+    --primary: 226 60% 46%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 226 60% 96%;
+    --primary-glow: 226 80% 62%;
+
+    --accent-gold: 38 82% 52%;
+    --accent-gold-soft: 38 90% 94%;
+    --accent-gold-foreground: 32 70% 18%;
+
+    --secondary: 220 18% 95%;
+    --secondary-foreground: 226 32% 18%;
+
+    --muted: 220 18% 95%;
+    --muted-foreground: 220 12% 46%;
+
+    --accent: 226 60% 96%;
+    --accent-foreground: 226 60% 38%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 16% 90%;
+    --input: 220 16% 88%;
+    --ring: 226 60% 46%;
+
+    /* Status */
+    --status-green-bg: 145 50% 94%;
+    --status-green-fg: 145 55% 28%;
+    --status-gold-bg: 38 90% 94%;
+    --status-gold-fg: 32 70% 32%;
+    --status-blue-bg: 226 60% 95%;
+    --status-blue-fg: 226 60% 38%;
+
+    /* Effects */
+    --gradient-hero: radial-gradient(
+        920px 480px at 78% 12%,
+        hsl(226 80% 62% / 0.18),
+        transparent 66%
+      ),
+      radial-gradient(
+        680px 340px at 12% 8%,
+        hsl(38 82% 52% / 0.12),
+        transparent 70%
+      );
+    --gradient-mockup: linear-gradient(
+      135deg,
+      hsl(226 60% 46% / 0.08),
+      hsl(38 82% 52% / 0.08)
+    );
+    --shadow-soft: 0 6px 22px hsl(226 32% 14% / 0.06);
+    --shadow-elevated: 0 24px 60px -20px hsl(226 60% 36% / 0.28);
+    --shadow-card: 0 1px 3px hsl(226 32% 14% / 0.04),
+      0 12px 32px -12px hsl(226 32% 14% / 0.08);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 226 32% 14%;
+    --sidebar-primary: 226 60% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 226 60% 96%;
+    --sidebar-accent-foreground: 226 60% 38%;
+    --sidebar-border: 220 16% 90%;
+    --sidebar-ring: 226 60% 46%;
+  }
+
+  .dark {
+    --background: 226 32% 8%;
+    --foreground: 220 20% 96%;
+
+    --surface: 226 28% 12%;
+    --surface-foreground: 220 20% 96%;
+
+    --card: 226 28% 12%;
+    --card-foreground: 220 20% 96%;
+
+    --popover: 226 28% 12%;
+    --popover-foreground: 220 20% 96%;
+
+    --primary: 226 80% 62%;
+    --primary-foreground: 226 32% 8%;
+    --primary-soft: 226 40% 18%;
+    --primary-glow: 226 80% 62%;
+
+    --secondary: 226 24% 16%;
+    --secondary-foreground: 220 20% 96%;
+
+    --muted: 226 24% 16%;
+    --muted-foreground: 220 14% 70%;
+
+    --accent: 226 40% 18%;
+    --accent-foreground: 220 20% 96%;
+
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 226 22% 22%;
+    --input: 226 22% 22%;
+    --ring: 226 80% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .bg-hero-glow {
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-mockup-glow {
+    background-image: var(--gradient-mockup);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  @keyframes float-soft {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .animate-float-soft {
+    animation: float-soft 6s ease-in-out infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 38s linear infinite;
+  }
+}
