@@ -40,7 +40,7 @@ const toneClass = {
 
 export const DashboardMockup = () => {
   return (
-    <div className="relative">
+    <div className="relative w-full max-w-full">
       {/* Glow */}
       <div
         aria-hidden
@@ -58,9 +58,9 @@ export const DashboardMockup = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-[170px_1fr] min-h-[420px]">
+        <div className="grid grid-cols-1 md:grid-cols-[170px_1fr] min-h-[420px]">
           {/* Sidebar */}
-          <aside className="border-r border-border bg-background/60 p-3">
+          <aside className="border-b border-border border-r-0 bg-background/60 p-3 md:border-r md:border-b-0">
             <div className="px-2 pb-3 pt-1">
               <span className="font-heading text-sm font-bold tracking-tight">
                 Simpla<span className="text-primary">Edu</span>
@@ -102,7 +102,7 @@ export const DashboardMockup = () => {
             </div>
 
             {/* Metrics */}
-            <div className="grid grid-cols-3 gap-2.5">
+            <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
               {metrics.map((m) => (
                 <div
                   key={m.label}
@@ -123,7 +123,7 @@ export const DashboardMockup = () => {
             </div>
 
             {/* Table + sidecards */}
-            <div className="grid min-w-0 grid-cols-[1.5fr_1fr] gap-3">
+            <div className="grid min-w-0 grid-cols-1 gap-3 md:grid-cols-[1.5fr_1fr]">
               <div className="rounded-lg border border-border bg-surface">
                 <div className="flex items-center justify-between border-b border-border px-3 py-2">
                   <p className="text-xs font-semibold text-foreground">Atividade recente</p>
