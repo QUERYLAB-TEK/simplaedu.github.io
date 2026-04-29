@@ -1,48 +1,46 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const plans = [
+const modules = [
   {
-    name: "Essencial",
-    price: "800",
-    limit: "Até 150 alunos",
-    description: "Para escolas começando a digitalizar a operação.",
-    features: [
-      "Matrícula digital",
-      "Acompanhamento dos responsáveis",
-      "Chamada e notas",
-      "Implantação gratuita",
-      "Suporte local em Goiânia",
-    ],
+    name: "Matrículas digitais",
+    price: "149",
+    additional: "0,80",
+    description: "Formulário online, upload de documentos e contrato gerado em PDF. Aluno matriculado em minutos, sem papel.",
   },
   {
-    name: "Padrão",
-    price: "1.200",
-    limit: "Até 400 alunos",
-    description: "O plano mais escolhido por escolas de médio porte.",
-    features: [
-      "Tudo do Essencial",
-      "Módulo financeiro completo",
-      "Cobranças automáticas por e-mail",
-      "Relatórios pedagógicos",
-      "Suporte local prioritário",
-    ],
-    featured: true,
+    name: "Chamada digital",
+    price: "99",
+    additional: "0,50",
+    description: "Professor registra presença por turma. O responsável recebe aviso automático quando o filho falta.",
   },
   {
-    name: "Avançado",
-    price: "1.700",
-    limit: "Até 800 alunos",
-    description: "Capacidade extra para escolas grandes ou multiunidades.",
-    features: [
-      "Tudo do Padrão",
-      "Maior capacidade operacional",
-      "Treinamento da equipe in loco",
-      "Dashboards personalizados",
-      "Suporte local dedicado",
-    ],
+    name: "Notas e boletim",
+    price: "129",
+    additional: "0,70",
+    description: "Professor lança nota e o boletim fica disponível no portal na hora. Sem esperar, sem reimprimir.",
+  },
+  {
+    name: "Portal do responsável",
+    price: "149",
+    additional: "0,80",
+    description: "Pais acompanham notas, faltas e cobranças pelo celular. Param de ligar para a secretaria.",
+  },
+  {
+    name: "Mensageria de cobranças",
+    price: "179",
+    additional: "1,00",
+    description: "Lembrete automático antes do vencimento. Inadimplência cai sem sua equipe precisar ligar para ninguém.",
   },
 ];
+
+const combo = {
+  name: "Todos os módulos",
+  price: "599",
+  additional: "3,50",
+  description: "Tudo incluso, com desconto de 15% em relação aos módulos avulsos. Para escolas que querem resolver de uma vez.",
+  featured: true,
+};
 
 export const PricingSection = () => {
   return (
@@ -53,71 +51,76 @@ export const PricingSection = () => {
             Planos e preços
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Adesão simples. Preço justo. Sem fidelidade.
+            Você paga pelo que usa. E só cresce o custo quando a escola cresce.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Implantação gratuita em todos os planos. Você começa quando quiser
-            e cancela quando quiser.
+            Escolha os módulos que fazem sentido para a sua escola. Cada um inclui até 150 alunos. Acima disso, um valor fixo por aluno é acrescido na mensalidade — sem surpresa, sem pacote forçado.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {plans.map((p) => (
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {modules.map((m) => (
             <article
-              key={p.name}
-              className={`reveal relative flex flex-col rounded-2xl border p-7 shadow-card transition-all hover:-translate-y-0.5 ${
-                p.featured
-                  ? "border-primary bg-surface shadow-elevated lg:scale-[1.03]"
-                  : "border-border bg-surface"
-              }`}
+              key={m.name}
+              className="reveal flex flex-col rounded-2xl border border-border bg-surface p-7 shadow-card transition-all hover:-translate-y-0.5"
             >
-              {p.featured && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gold-foreground shadow-soft">
-                  Mais escolhido
-                </span>
-              )}
-
               <div>
-                <p className="font-heading text-sm font-semibold uppercase tracking-wider text-primary">
-                  {p.name}
+                <p className="font-heading text-lg font-semibold text-foreground">
+                  {m.name}
                 </p>
-                <p className="mt-2 text-sm text-muted-foreground">{p.limit}</p>
               </div>
 
-              <div className="mt-5 flex items-baseline gap-1">
+              <div className="mt-4 flex items-baseline gap-1">
                 <span className="text-sm font-semibold text-muted-foreground">R$</span>
-                <span className="font-heading text-5xl font-bold tracking-tight text-foreground">
-                  {p.price}
+                <span className="font-heading text-4xl font-bold tracking-tight text-foreground">
+                  {m.price}
                 </span>
                 <span className="text-sm text-muted-foreground">/mês</span>
               </div>
+              <p className="mt-1 text-sm text-muted-foreground">
+                até 150 alunos · + R$ {m.additional}/aluno adicional
+              </p>
 
-              <p className="mt-3 text-sm text-muted-foreground">{p.description}</p>
+              <p className="mt-4 text-sm text-muted-foreground">{m.description}</p>
 
-              <ul className="mt-6 flex-1 space-y-2.5 border-t border-border pt-6">
-                {p.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm text-foreground">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                asChild
-                className="mt-7 w-full"
-                variant={p.featured ? "default" : "outline"}
-              >
-                <a href="#interesse">
-                  {p.featured ? "Falar com a equipe" : "Quero começar"}
-                </a>
+              <Button asChild className="mt-6 w-full" variant="outline">
+                <a href="#interesse">Adicionar módulo</a>
               </Button>
             </article>
           ))}
+
+          <article className="reveal relative flex flex-col rounded-2xl border border-primary bg-surface p-7 shadow-elevated lg:col-span-1 lg:scale-[1.03]">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gold-foreground shadow-soft">
+              Recomendado
+            </span>
+
+            <div>
+              <p className="font-heading text-lg font-semibold text-foreground">
+                {combo.name}
+              </p>
+            </div>
+
+            <div className="mt-4 flex items-baseline gap-1">
+              <span className="text-sm font-semibold text-muted-foreground">R$</span>
+              <span className="font-heading text-4xl font-bold tracking-tight text-foreground">
+                {combo.price}
+              </span>
+              <span className="text-sm text-muted-foreground">/mês</span>
+            </div>
+            <p className="mt-1 text-sm text-muted-foreground">
+              até 150 alunos · + R$ {combo.additional}/aluno adicional
+            </p>
+
+            <p className="mt-4 text-sm text-muted-foreground">{combo.description}</p>
+
+            <Button asChild className="mt-6 w-full">
+              <a href="#interesse">Falar com a equipe</a>
+            </Button>
+          </article>
         </div>
 
         <p className="mt-8 text-center text-sm text-muted-foreground">
-          Implantação gratuita em todos os planos. Sem contrato mínimo de fidelidade.
+          Implantação gratuita em todos os módulos. Sem contrato de fidelidade. Cancela quando quiser.
         </p>
       </div>
     </section>

@@ -24,11 +24,11 @@ const Index = () => {
       <SiteHeader />
       <main>
         <Hero />
+        <WhyUsSection />
         <QuestionStrip />
         <ProblemSection />
         <ModulesSection />
         <AudienceSection />
-        <WhyUsSection />
         <PricingSection />
         <FaqSection />
         <InterestSection />

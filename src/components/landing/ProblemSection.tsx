@@ -1,20 +1,25 @@
-import { Clock, PhoneOff, BadgeDollarSign } from "lucide-react";
+import { Clock, PhoneOff, BadgeDollarSign, TrendingDown } from "lucide-react";
 
 const problems = [
   {
     icon: Clock,
-    title: "Matrícula lenta e manual",
-    body: "Secretárias perdem horas em processos que deveriam levar minutos. Documentos perdidos, retrabalho e frustração viraram rotina.",
+    title: "Secretaria afogada em papel",
+    body: "Horas para matricular um aluno. Documentos perdidos, contratos impressos, retrabalho toda semana. O que deveria levar minutos leva o dia inteiro.",
   },
   {
     icon: PhoneOff,
-    title: "Pais sem informação",
-    body: "Responsáveis ligam toda semana para saber nota, falta e cobrança. A escola perde tempo. A família perde confiança.",
+    title: "Família no escuro — e ligando para saber",
+    body: "Pai liga para saber nota. Mãe manda WhatsApp para perguntar se a mensalidade venceu. A escola perde tempo e a família perde confiança.",
   },
   {
     icon: BadgeDollarSign,
-    title: "Caro e difícil de usar",
-    body: "Sistemas custam de R$ 1.500 a R$ 5.000 por mês. Mesmo assim, a equipe não consegue usar direito. O suporte demora, o sistema trava.",
+    title: "Sistema caro que ninguém consegue usar",
+    body: "R$ 1.500 a R$ 5.000 por mês. Treinamento que demora semanas. Suporte que demora dias. E no fim, a equipe ainda usa planilha paralela.",
+  },
+  {
+    icon: TrendingDown,
+    title: "Inadimplência que corrói o mês",
+    body: "Boleto que não chegou. Cobrança manual. Fluxo de caixa que não fecha. A escola perde receita porque não tem ferramenta — não porque os pais não querem pagar.",
   },
 ];
 
@@ -27,15 +32,14 @@ export const ProblemSection = () => {
             O problema
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            A escola merece mais do que a tecnologia que usa hoje.
+            Sua escola merece um sistema que trabalha para você — não contra.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Três dores se repetem em escolas privadas de pequeno e médio porte
-            em Goiânia. O SimplaEdu nasceu para resolver cada uma delas.
+            Quatro problemas que se repetem toda semana em escolas privadas de educação básica. O SimplaEdu nasceu para resolver cada um deles.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {problems.map((p) => (
             <article
               key={p.title}

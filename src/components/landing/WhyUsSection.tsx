@@ -4,22 +4,22 @@ const reasons = [
   {
     icon: MapPin,
     title: "Suporte local em Goiânia",
-    body: "Atendimento direto com quem desenvolve o sistema. Sem ticket, sem fila, sem chatbot.",
+    body: "Você fala com quem fez o sistema. Sem ticket. Sem fila. Sem chatbot. Se travar, a gente resolve.",
   },
   {
     icon: Sparkles,
     title: "Usado sem treinamento",
-    body: "Interface pensada para a secretária matricular um aluno no primeiro dia, sem manual.",
+    body: "Sua secretária usa no primeiro dia. Sem curso, sem manual, sem semanas de implantação.",
   },
   {
     icon: HandHeart,
     title: "Implantação gratuita",
-    body: "Configuração e migração de dados incluídas em todos os planos — sem custo de setup.",
+    body: "A gente configura tudo para você. Migração de dados incluída. Você não paga para começar.",
   },
   {
     icon: GraduationCap,
     title: "Co-criado com escolas",
-    body: "Aberto para incorporar demandas reais das escolas no produto, semana após semana.",
+    body: "Cada escola que entra ajuda a construir o produto. Se você precisa de algo, a gente coloca na fila — de verdade.",
   },
 ];
 
@@ -36,10 +36,7 @@ export const WhyUsSection = () => {
               Software escolar feito perto de quem usa.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-primary-foreground/80">
-              Goiânia tem mais de 530 escolas privadas de educação básica. A
-              maioria usa sistemas desenvolvidos fora do estado, com suporte
-              remoto e pouca abertura para adaptações. O SimplaEdu existe para
-              mudar isso.
+              Goiânia tem mais de 530 escolas privadas. A maioria usa sistema de São Paulo ou do Sul — com suporte por ticket, atendimento por chatbot e zero abertura para adaptar o que não funciona. O SimplaEdu é diferente: feito aqui, para escolas daqui, com atendimento de quem construiu o sistema.
             </p>
 
             <div className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 px-5 py-4 backdrop-blur">

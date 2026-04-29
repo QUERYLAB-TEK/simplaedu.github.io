@@ -11,13 +11,13 @@ const modules = [
   {
     icon: FileSignature,
     title: "Matrículas digitais",
-    body: "Formulário online, upload de documentos e geração automática do contrato em PDF — sem papel, sem retrabalho.",
+    body: "Aluno matriculado em minutos. Contrato gerado automaticamente, documentos salvos, sem imprimir uma folha.",
     bullets: ["Formulário responsivo", "Upload de documentos", "Contrato em PDF"],
   },
   {
     icon: Smartphone,
     title: "Acompanhamento dos responsáveis",
-    body: "Pais acompanham notas, frequência e cobranças pelo celular, sem precisar ligar para a escola.",
+    body: "Os pais veem nota, falta e cobrança pelo celular — e param de ligar para a secretaria.",
     bullets: ["Boletim em tempo real", "Avisos de falta", "Cobranças no app"],
     highlight: true,
   },
@@ -36,7 +36,7 @@ const modules = [
   {
     icon: Mail,
     title: "Cobranças por e-mail",
-    body: "Notificações automáticas de mensalidade para os responsáveis, com lembrete antes do vencimento.",
+    body: "Lembrete automático antes do vencimento. Inadimplência cai sem sua equipe precisar ligar para ninguém.",
     bullets: ["Lembrete automático", "Status de pagamento", "Relatório financeiro"],
   },
 ];
@@ -50,12 +50,10 @@ export const ModulesSection = () => {
             A solução
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Cinco módulos para simplificar o que mais pesa na rotina escolar.
+            Da matrícula ao boletim, do financeiro ao celular dos pais. Tudo em um lugar só.
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
-            Um sistema completo para escolas que querem organizar processos,
-            reduzir retrabalho e oferecer uma experiência clara para famílias,
-            professores e gestão.
+            Para a secretária que cansa de refazer as mesmas coisas. Para o pai que quer saber do filho sem precisar ligar. Para você, que quer enxergar a escola inteira sem abrir planilha.
           </p>
         </div>
 

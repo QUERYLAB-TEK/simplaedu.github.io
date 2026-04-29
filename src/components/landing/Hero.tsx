@@ -18,20 +18,22 @@ export const Hero = () => {
           </h1>
 
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            O SimplaEdu centraliza matrícula, notas, frequência e financeiro em
-            um único sistema. Sua equipe ganha tempo e os responsáveis
-            acompanham tudo pelo celular.
+            Chega de secretária respondendo WhatsApp de pai para saber nota. Chega de planilha de inadimplência que não fecha. A SimplaEdu resolve os dois — e sua equipe usa no primeiro dia, sem treinamento.
+          </p>
+
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+            Um sistema de gestão escolar construído em Goiânia, para escolas de Goiânia. Simples por convicção, completo por necessidade.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button asChild size="lg" className="shadow-soft">
               <a href="#interesse">
-                Quero entrar na lista
+                Garantir minha vaga
                 <ArrowRight className="ml-1.5 h-4 w-4" />
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href="#funcionalidades">Ver como funciona</a>
+              <a href="#funcionalidades">Ver o sistema em 2 minutos</a>
             </Button>
           </div>
 
@@ -44,6 +46,8 @@ export const Hero = () => {
             <span>Implantação gratuita</span>
             <span className="hidden h-1 w-1 rounded-full bg-border sm:block" />
             <span>Sem fidelidade</span>
+            <span className="hidden h-1 w-1 rounded-full bg-border sm:block" />
+            <span>Suporte sem chatbot</span>
           </div>
         </div>
 

@@ -27,8 +27,8 @@ const faqs = [
     a: "Não. Você começa quando quiser e cancela quando quiser. Acreditamos que o produto precisa se provar a cada mês.",
   },
   {
-    q: "Quando o SimplaEdu vai estar disponível?",
-    a: "O produto está em desenvolvimento. As primeiras escolas cadastradas na lista de interesse são contatadas diretamente pela equipe quando estivermos prontos para ativar novas escolas.",
+    q: "Como funciona o acesso antecipado?",
+    a: "As primeiras escolas cadastradas na lista de interesse têm prioridade de acesso e condições especiais. Entramos em contato diretamente quando o sistema estiver pronto para novas ativações.",
   },
 ];
 

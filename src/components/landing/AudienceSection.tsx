@@ -4,12 +4,12 @@ const audiences = [
   {
     icon: Briefcase,
     role: "Direção e donos de escola",
-    body: "Visão acadêmica e financeira em um só lugar, sem depender de relatórios manuais ou planilhas paralelas.",
+    body: "Você enxerga alunos, notas e mensalidades em um painel só. Sem planilha. Sem relatório manual. Sem depender de ninguém para te contar o que está acontecendo.",
   },
   {
     icon: FileText,
     role: "Secretaria",
-    body: "Matrícula em minutos, menos papel e menos retrabalho em processos recorrentes do dia a dia.",
+    body: "Matricula, emite contrato e atualiza o cadastro do aluno em minutos. Sobra tempo para o que realmente importa.",
   },
   {
     icon: Presentation,
@@ -32,7 +32,7 @@ export const AudienceSection = () => {
             Para quem é
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
-            Impacto operacional real em cada frente da escola.
+            Para cada pessoa da escola, uma razão para usar.
           </h2>
         </div>
 

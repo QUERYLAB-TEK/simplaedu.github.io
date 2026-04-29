@@ -107,13 +107,11 @@ export const InterestSection = () => {
           </span>
 
           <h2 className="mt-5 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl text-balance">
-            Produto em desenvolvimento. As primeiras escolas recebem contato direto.
+            Acesso antecipado. As primeiras escolas entram antes do lançamento público.
           </h2>
 
           <p className="mt-5 text-lg text-muted-foreground">
-            Se sua escola quer reduzir carga operacional e melhorar a
-            comunicação com os pais, deixe seus dados. Sem compromisso e sem
-            spam.
+            Se a sua escola quer parar de perder tempo com papel, planilha e WhatsApp de pai, deixe seus dados. A gente entra em contato. Sem enrolação e sem spam.
           </p>
 
           <div className="mt-8 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
