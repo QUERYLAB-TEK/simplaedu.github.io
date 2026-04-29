@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({
   nome: z.string().trim().min(2, "Digite seu nome completo").max(120),
@@ -75,10 +74,14 @@ export const InterestSection = () => {
     }
 
     setSubmitting(true);
-    const { error } = await supabase.from("interest_leads").insert(parsed.data);
+    const res = await fetch("https://formspree.io/f/mvzdejzk", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(parsed.data),
+    });
     setSubmitting(false);
 
-    if (error) {
+    if (!res.ok) {
       toast({
         title: "Não conseguimos enviar agora",
         description: "Tente novamente em alguns instantes ou escreva para contato@querylab.com.br.",
